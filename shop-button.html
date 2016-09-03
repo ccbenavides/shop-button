@@ -13,20 +13,67 @@
       :host {
         display: block;
       }
+      .btn1 {
+        background: #5fcf80;
+        border: solid 2px #5fcf80;
+        color: #fff;
+        height: 100%;
+        padding: 12px;
+        line-height: 10px;
+        white-space: normal;
+        transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, width 0.3s ease, opacity 0.3s ease;
+        border-radius: 4px;
+        cursor: pointer;
+        display: inline-block;
+        font-weight: 500;
+        position: relative;
+        margin: 0 10px 0 0;
+        outline: none;
+        text-align: center;
+        text-decoration: none;
+        vertical-align: baseline;
+        white-space: nowrap;
+        
+      }
+      .btn2{
+        color: #5cb860;
+        cursor: pointer;
+        display: inline-block;
+        border-radius: 100px;
+        background: transparent;
+        border: 2px solid rgba(48,73,97,0.1);
+        font-weight: 500;
+        padding: 0 12px;
+        font-size: 13px;
+        line-height: 32px;
+        white-space: nowrap;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        transition: border-color 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+      }
+      .btn2:hover{
+        color: #5cb860;
+        border-color: #5cb860;
+      }
+
     </style>
-    <h2>Hello [[prop1]]</h2>
+    <a href="{{url}}" class="btn2"><content></content></a>
+
   </template>
 
   <script>
     Polymer({
-
       is: 'shop-button',
-
       properties: {
         prop1: {
           type: String,
           value: 'shop-button',
         },
+        url: {
+          type: String,
+          value: 'http://shopping-car.com/car',
+        }
       },
 
     });
